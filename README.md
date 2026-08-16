@@ -78,28 +78,28 @@ growth opportunities?
 
 ## Section B: Power Query – Data Cleaning & Transformation
 
-![Raw Data](screenshots/power_query/01_raw_data.png)
+![Raw Data](<screenshots/power_query/Row_Data.png>)
 *Raw dataset immediately after headers were promoted and data types set.*
 
-![Data Types](screenshots/power_query/02_data_types.png)
+![Data Types](<screenshots/power_query/Set data types.png>)
 *Corrected data types for InvoiceDate, Customer ID, and Price.*
 
-![TransactionType Flag](screenshots/power_query/03_transaction_type_flag.png)
+![TransactionType Flag](<screenshots/power_query/TransactionType.png>)
 *TransactionType column added to distinguish Sales from Returns.*
 
-![PriceFlag](screenshots/power_query/04_price_flag.png)
+![PriceFlag](<screenshots/power_query/PriceFlag.png>)
 *PriceFlag column added to flag zero/invalid prices.*
 
-![CustomerStatus](screenshots/power_query/05_customer_status.png)
+![CustomerStatus](<screenshots/power_query/CustomerStatus.png>)
 *CustomerStatus column added to separate Registered customers from Guest/Unknown transactions.*
 
-![Customer ID Clean](screenshots/power_query/06_customer_id_clean.png)
+![Customer ID Clean](<screenshots/power_query/Customer ID Clean.png>)
 *Customer ID Clean column created as a reliable relationship key with no blanks.*
 
-![Country Standardized](screenshots/power_query/07_country_standardized.png)
+![Country Standardized](<screenshots/power_query/Replace Value.png>)
 *Country field standardized (EIRE→Ireland, RSA→South Africa, USA→United States) using Replace Values.*
 
-![InvoiceDateOnly Column](screenshots/power_query/08_invoicedateonly_column.png)
+![InvoiceDateOnly Column](<screenshots/power_query/Fact_Dim.png>)
 *InvoiceDateOnly custom column created (DateTime.Date([InvoiceDate])) to serve as the date relationship key with DimDate.*
 
 ### Documented Transformations
@@ -184,6 +184,12 @@ maintain responsive performance during development.
 ![Data Model](screenshots/model/03_model.png)
 *Star schema: FactSales connected to DimProduct, DimCustomer, DimLocation, and DimDate.*
 
+![DimProduct](<screenshots/power_query/DimProduct.png>)
+![DimCustomer](<screenshots/power_query/DimCustomer.png>)
+![DimLocation](<screenshots/power_query/DimLocation.png>)
+![DimDate](<screenshots/power_query/DimDate.png>)
+*Individual dimension table detail views (DimProduct, DimCustomer, DimLocation, DimDate).*
+
 ### Fact Table: FactSales
 Selected as the central fact table because it contains one row per transaction line item — the
 core measurable business event. Holds keys (Invoice, StockCode, Country, Customer ID Clean,
@@ -225,13 +231,13 @@ avoid ambiguous filter paths.
 
 12 DAX measures were created across three levels of complexity.
 
-![DAX Level 1](screenshots/dax/dax_level1_core_measures.png)
+![DAX Level 1](<screenshots/dax/level1_core_measures.png>)
 *Level 1 – Core Measures.*
 
-![DAX Level 2](screenshots/dax/dax_level2_business_measures.png)
+![DAX Level 2](<screenshots/dax/Calculated Business Measures.png>)
 *Level 2 – Calculated Business Measures.*
 
-![DAX Level 3](screenshots/dax/dax_level3_advanced_dax.png)
+![DAX Level 3](screenshots/dax/advanced_dax.png)
 *Level 3 – Advanced DAX (RANKX, SWITCH, VAR, CALCULATE, ALLSELECTED).*
 
 ### Level 1 – Core Measures
@@ -370,20 +376,26 @@ DSA3050-PowerBI-Merhawit-Kassa-670554/
 │
 └── screenshots/
     ├── power_query/
-    │   ├── 01_raw_data.png
-    │   ├── 02_data_types.png
-    │   ├── 03_transaction_type_flag.png
-    │   ├── 04_price_flag.png
-    │   ├── 05_customer_status.png
-    │   ├── 06_customer_id_clean.png
-    │   ├── 07_country_standardized.png
-    │   └── 08_invoicedateonly_column.png
+    │   ├── Row_Data.png
+    │   ├── Set data types.png
+    │   ├── TransactionType.png
+    │   ├── PriceFlag.png
+    │   ├── CustomerStatus.png
+    │   ├── Customer ID Clean.png
+    │   ├── Replace Value.png
+    │   ├── Fact_Dim.png
+    │   ├── DimProduct.png
+    │   ├── DimCustomer.png
+    │   ├── DimLocation.png
+    │   ├── DimDate.png
+    │   └── DimDate(2).png
     ├── model/
     │   └── 03_model.png
     ├── dax/
-    │   ├── dax_level1_core_measures.png
-    │   ├── dax_level2_business_measures.png
-    │   └── dax_level3_advanced_dax.png
+    │   ├── level1_core_measures.png
+    │   ├── core_measures.png
+    │   ├── Calculated Business Measures.png
+    │   └── advanced_dax.png
     └── dashboard/
         ├── 04_dashboard_overview.png
         ├── 05_dashboard_analysis.png
