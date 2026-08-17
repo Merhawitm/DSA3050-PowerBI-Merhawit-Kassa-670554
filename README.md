@@ -345,24 +345,34 @@ Revenue Over Time and Cancellation Rate Over Time trend lines; Cancelled/Complet
 Sets the context for the report before any analysis is shown: report title, author, and
 registration number, plus a quick index of the pages that follow.
 
-### Page 2: Executive Overview
-Gives management an immediate read on performance: Total Revenue, Total Transactions, Total
-Quantity Sold, Average Order Value, and Unique Customers as KPI cards; a revenue trend line
-over 2011; top-performing products by revenue; Month and Country slicers for interactive
-filtering.
+### Dashboard Design Logic
 
-### Page 3: Detailed / Product Analysis
-Deep dive into product and country performance: a ranked table of products by revenue (showing
-Product Rank, Total Quantity Sold, and % of Total Revenue), an Order Value Tier by Country
-table, a bar chart of % of Total Revenue by Description, and a scatter plot comparing quantity
-sold vs revenue to identify high-volume/low-value vs low-volume/high-value products.
+The three analysis pages follow a deliberate funnel: **Overview → Product Analysis →
+Diagnostic**, moving from *what happened* to *what's driving it* to *what's going wrong*.
 
-### Page 4: Diagnostic Analysis
-Investigates why cancellations and returns occur: headline Net Revenue, Cancellation Rate %,
-and Total Returns Revenue KPIs; cancellation rate broken down by country to identify problem
-regions; returns-revenue and cancellation-rate trend lines to spot seasonal spikes; and a table
-of the most frequently cancelled products. A Cancelled/Completed slicer allows toggling the
-whole page's context.
+**Page 2 – Executive Overview** *(what happened)*
+The at-a-glance page for management, requiring no drill-down:
+- 5 KPI cards: Total Revenue, Total Transactions, Total Quantity Sold, Average Order Value,
+  Unique Customers
+- Revenue trend line across 2011 to surface spikes, dips, and seasonality
+- Top-performing products by revenue
+- Month and Country slicers to filter the whole page interactively
+
+**Page 3 – Detailed / Product Analysis** *(what's driving it)*
+Digs into why specific products and countries perform the way they do:
+- Ranked products table: Total Revenue, Product Rank, Total Quantity Sold, % of Total Revenue
+- Order Value Tier by Country table: groups countries into Low/Medium/High spend tiers
+- % of Total Revenue by Description bar chart
+- Quantity Sold vs Revenue scatter plot: separates high-volume/low-value products from
+  low-volume/high-value ones
+
+**Page 4 – Diagnostic Analysis** *(what's going wrong)*
+Focused on cancellations and returns rather than sales performance:
+- 3 KPI cards: Net Revenue, Cancellation Rate %, Total Returns Revenue
+- Cancellation Rate % by Country bar chart, to flag problem markets
+- Returns Revenue Over Time and Cancellation Rate Over Time trend lines, to spot seasonal spikes
+- Most Frequently Cancelled Products table
+- Cancelled/Completed slicer to toggle the whole page's context
 
 ### Interactivity Features Used
 - Slicers (Month, Country, Cancelled/Completed)
