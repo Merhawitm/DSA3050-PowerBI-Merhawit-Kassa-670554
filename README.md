@@ -318,39 +318,51 @@ for genuine comparison. This is a deliberate, documented trade-off rather than a
 
 ## Section E: Professional Power BI Dashboards
 
-Three report pages were built, moving from Overview → Detailed Analysis → Diagnostic Analysis.
+The report opens on a Cover page, then moves through three analysis pages: Executive Overview →
+Detailed/Product Analysis → Diagnostic Analysis.
 
-![Executive Overview](screenshots/dashboard/04_dashboard_overview.png)
-*Page 1 – Executive Overview: KPI cards, revenue trend, top products, top countries by revenue,
-Month and Country slicers.*
+![Cover Page](screenshots/dashboard/CoverPage.png)
+*Cover Page – Report title, student name, registration number, and page index (Executive
+Overview, Detailed Analysis, Diagnostic Analysis).*
 
-![Product Analysis](screenshots/dashboard/05_dashboard_analysis.png)
-*Page 2 – Product Analysis: Top 15 products table with rank and revenue share, quantity vs
-revenue scatter plot, order value tier breakdown, Country slicer.*
+![Executive Overview](<screenshots/dashboard/Executive Overview.png>)
+*Page 2 – Executive Overview: KPI cards (Total Revenue, Total Quantity Sold, Average Order
+Value, Unique Customers, Total Transactions), revenue trend by date, revenue by product, Month
+and Country slicers.*
 
-![Diagnostic Analysis](screenshots/dashboard/06_dashboard_insights.png)
-*Page 3 – Diagnostic Analysis: Cancellation rate and returns-revenue KPIs, cancellation rate by
-country, returns revenue over time, most frequently cancelled products table,
-Cancelled/Completed slicer.*
+![Product Analysis](<screenshots/dashboard/Product Analysis.png>)
+*Page 3 – Detailed/Product Analysis: Top products table with Total Revenue, Product Rank by
+Revenue, Total Quantity Sold and % of Total Revenue; Order Value Tier by Country table; % of
+Total Revenue by Description bar chart; Total Quantity Sold vs Total Revenue scatter plot;
+Country slicer.*
 
-### Page 1: Executive Overview
+![Diagnostic Analysis](<screenshots/dashboard/Diagnostic Analysis.png>)
+*Page 4 – Diagnostic Analysis: Net Revenue, Cancellation Rate % and Total Returns Revenue KPIs;
+Most Frequently Cancelled Products table; Cancellation Rate % by Country bar chart; Returns
+Revenue Over Time and Cancellation Rate Over Time trend lines; Cancelled/Completed slicer.*
+
+### Cover Page
+Sets the context for the report before any analysis is shown: report title, author, and
+registration number, plus a quick index of the pages that follow.
+
+### Page 2: Executive Overview
 Gives management an immediate read on performance: Total Revenue, Total Transactions, Total
 Quantity Sold, Average Order Value, and Unique Customers as KPI cards; a revenue trend line
-over 2011; top-performing products and countries by revenue; Month and Country slicers for
-interactive filtering.
+over 2011; top-performing products by revenue; Month and Country slicers for interactive
+filtering.
 
-### Page 2: Product Analysis
-Deep dive into product performance: a ranked table of the top 15 products by revenue (showing
-Product Rank, Quantity Sold, and % of Total Revenue), a scatter plot comparing quantity sold vs
-revenue to identify high-volume/low-value vs low-volume/high-value products, and a donut chart
-showing the Low/Medium/High order value tier split.
+### Page 3: Detailed / Product Analysis
+Deep dive into product and country performance: a ranked table of products by revenue (showing
+Product Rank, Total Quantity Sold, and % of Total Revenue), an Order Value Tier by Country
+table, a bar chart of % of Total Revenue by Description, and a scatter plot comparing quantity
+sold vs revenue to identify high-volume/low-value vs low-volume/high-value products.
 
-### Page 3: Diagnostic Analysis
-Investigates why cancellations and returns occur: headline Cancellation Rate %, Total Returns
-Revenue, and Net Revenue KPIs; cancellation rate broken down by country to identify problem
-regions; a returns-revenue trend line to spot seasonal spikes; and a table of the most
-frequently cancelled products. A Cancelled/Completed slicer allows toggling the whole page's
-context.
+### Page 4: Diagnostic Analysis
+Investigates why cancellations and returns occur: headline Net Revenue, Cancellation Rate %,
+and Total Returns Revenue KPIs; cancellation rate broken down by country to identify problem
+regions; returns-revenue and cancellation-rate trend lines to spot seasonal spikes; and a table
+of the most frequently cancelled products. A Cancelled/Completed slicer allows toggling the
+whole page's context.
 
 ### Interactivity Features Used
 - Slicers (Month, Country, Cancelled/Completed)
@@ -360,7 +372,6 @@ context.
 - Dynamic titles reflecting each visual's purpose
 
 ---
-
 ## Section F: Repository Structure
 
 ```
